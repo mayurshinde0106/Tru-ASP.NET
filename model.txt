@@ -1,0 +1,208 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using TRU.Realty.Common;
+
+namespace TRU.Employee.WebAPI.Models;
+public class FileNameParam
+{
+    public string FileName { get; set; }
+    public string ContentType { get; set; }
+}
+
+public class EmployeeRole
+{
+    public int Role { get; set; }
+    public int? TenantId { get; set; }
+    public int? ProjectId { get; set; }
+}
+public class SetFlagModel
+{
+    public string Key { get; set; }
+    public bool Value { get; set; }
+}
+public class KeyModel
+{
+    public string Key { get; set; }
+}
+public class ExistsParameter
+{
+    public string Input { get; set; }
+    public string Search { get; set; }
+    public int? EntityId { get; set; }
+    public string UserType { get; set; }
+}
+public class TenantParameter
+{
+    public int? TenantId { get; set; }
+}
+
+public class GetAuditListModel
+{
+    public DateTime? FromDate { get; set; }
+    public DateTime? ToDate { get; set; }
+    public int? TenantId { get; set; }
+    public string Input { get; set; }
+}
+
+public class DateRangeWithTenantModel
+{
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
+    public int? TenantId { get; set; }
+}
+public class StatusModel
+{
+    public int UserId { get; set; }
+    public int? TenantId { get; set; }
+}
+
+public class IsExistsModel
+{
+    public int? UserId { get; set; }
+    public int? EntityId { get; set; }
+    public string UserType { get; set; }
+    public string Input { get; set; }
+    public int? ProjectId { get; set; }
+    public string Search { get; set; }
+    public int? TenantId { get; set; }
+}
+public class ContactModelInsert
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Email { get; set; }
+    public string CountryCode { get; set; }
+    public string MobileNo { get; set; }
+    public string City { get; set; }
+    public string PreferredProject { get; set; }
+    public string Area { get; set; }
+    public string Source { get; set; }
+    public int? EntityId { get; set; }
+    public string UserType { get; set; }
+    public string ContactType { get; set; }
+    public string Remark { get; set; }
+    public string Campaign { get; set; }
+    public int? Id { get; set; }
+    public int? TenantId { get; set; }
+    public string AlternateNo { get; set; }
+    public string AlternateCountryCode { get; set; }
+    public string AllParameter { get; set; }
+    public string Country { get; set; }
+    public DataTable ContactBulkInsert_Temp { get; set; }
+}
+public class ExcelFileToJsonModel
+{
+    public List<FileAttachmentModel> Files { get; set; }
+}
+public class EnquiryModelInsert
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Email { get; set; }
+    public string CountryCode { get; set; }
+    public string MobileNo { get; set; }
+    public string City { get; set; }
+    public string PreferredProject { get; set; }
+    public string PreferredCity { get; set; }
+    public string PreferredArea { get; set; }
+    public string Source { get; set; }
+    public int? EntityId { get; set; }
+    public string UserType { get; set; }
+    public string TypeOfLead { get; set; }
+    public string MsgDetails { get; set; }
+    public string ContactedBy { get; set; }
+    public string Budget { get; set; }
+    public string PropertyType { get; set; }
+    public string Campaign { get; set; }
+    public int? Id { get; set; }
+    public int? TenantId { get; set; }
+    public string AlternateNo { get; set; }
+    public string AlternateMobileCountryCode { get; set; }
+    public Boolean? IsInterNational { get; set; }
+    public string AllParameter { get; set; }
+    public string Country { get; set; }
+    public string AgencyId { get; set; }
+}
+
+public class IsExistsModelColdCalling
+{
+    public int? UserId { get; set; }
+    public int? EntityId { get; set; }
+    public string UserType { get; set; }
+    public string Input { get; set; }
+    public int? ProjectId { get; set; }
+    public string Search { get; set; }
+    public int? TenantId { get; set; }
+    public string Campaign { get; set; }
+}
+public class UpdateEmailApproveRejectModel
+{
+    public int TransactionId { get; set; }
+    public string EmailStatus { get; set; }
+    public string Module { get; set; }
+}
+
+public class ITreos_postDataModel
+{
+    public string data { get; set; }
+    public string Website { get; set; }
+}
+
+// post Employee
+public class Employee_postDataModel
+{
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public string password { get; set; }
+}
+//  Get Employee
+public class Employee_getDataModel
+{
+    public string Email { get; set; }
+}
+
+// Employee get details
+    public class Employee_getDatails
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
+    
+}
+
+// student
+public class Student_PostDataModel
+{
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public string Gender { get; set; }
+
+    public string SchoolName { get; set; }
+    public string MoNumber { get; set; }
+}
+
+
+// Asset Insert Data Model
+public class Asset_PostDataModel
+{
+    public int AssetId { get; set; }
+    public string Name { get; set; }
+    public string Category { get; set; }
+    public string Condition { get; set; }
+
+    public int Cost { get; set; }
+    public string Location { get; set; }
+    public string Status { get; set; }
+
+    public string Action { get; set; }
+}
+
+// Asset Select Data Model
+public class Employee_PostDataModel
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
+
+}
+
+
